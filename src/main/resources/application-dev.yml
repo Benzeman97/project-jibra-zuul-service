@@ -1,0 +1,32 @@
+zuul:
+  routes:
+    user-info-service:
+      path: /user-info/**
+      service-id: user-info-service
+    movie-info-service:
+      path: /movie-info/**
+      service-id: movie-info-service
+    tvseries-info-service:
+      path: /tvseries-info/**
+      service-id: tvseries-info-service
+    payment-info-service:
+      path: /payment/**
+      service-id: payment-info-service
+    authorization-server:
+      path: /auth/**
+      service-id: authorization-server
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+  sensitive-headers: Cookie,Set-Cookie
+
+
+discovery:
+  server:
+    port: 8070
+    hostName: 127.0.0.1
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: 'http://${discovery.server.hostName}:${discovery.server.port}/eureka'

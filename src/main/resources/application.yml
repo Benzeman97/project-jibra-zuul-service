@@ -1,0 +1,8 @@
+server:
+  port: 8075
+
+spring:
+  application:
+    name: zuul-edge-service
+  profiles:
+    active: dev
