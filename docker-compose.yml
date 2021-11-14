@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  zuul-edge-service:
+    image: zuul-edge-service:1.x
+    container_name: zuul-edge-service
+    ports:
+    - 8075:8075
+    restart: on-failure
+    networks:
+      - discovery-server_voyage-service-network
+    
+networks:
+   discovery-server_voyage-service-network:
+            external:true

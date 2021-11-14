@@ -10,7 +10,7 @@ zuul:
       path: /tvseries-info/**
       service-id: tvseries-info-service
     payment-info-service:
-      path: /payment/**
+      path: /payment-info/**
       service-id: payment-info-service
     authorization-server:
       path: /auth/**
@@ -30,3 +30,37 @@ eureka:
   client:
     serviceUrl:
       defaultZone: 'http://${discovery.server.hostName}:${discovery.server.port}/eureka'
+
+#60 seconds
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+
+ribbon:
+  ReadTimeout: 60000
+  connection-timeout: 60000
+  eureka:
+    enabled: true
+    
+logging:
+  file:
+    name: 'D:/Spring Boot Project/jibra-logs/common.log'
+  level:
+    root: info
+
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
