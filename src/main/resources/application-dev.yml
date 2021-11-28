@@ -18,7 +18,7 @@ zuul:
   host:
     socket-timeout-millis: 60000
     connect-timeout-millis: 60000
-  sensitive-headers: Cookie,Set-Cookie
+  sensitive-headers: Cookie, Set-Cookie, Access-Control-Allow-Credentials, Access-Control-Allow-Origin
 
 
 discovery:
