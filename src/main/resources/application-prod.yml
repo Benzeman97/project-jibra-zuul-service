@@ -30,6 +30,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: 'http://${discovery.server.hostName}:${discovery.server.port}/eureka'
+  instance:
+    preferIpAddress: true
+    ip-address: '${discovery.server.hostName}'  
+    hostname: '${discovery.server.hostName}'    
 
 #60 seconds
 
