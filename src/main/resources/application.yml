@@ -5,4 +5,4 @@ spring:
   application:
     name: zuul-edge-service
   profiles:
-    active: dev
+    active: prod
