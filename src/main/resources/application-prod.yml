@@ -30,10 +30,15 @@ eureka:
   client:
     serviceUrl:
       defaultZone: 'http://${discovery.server.hostName}:${discovery.server.port}/eureka'
+    region: us-east-2
+    register-with-eureka: true
+    fetch-registry: true
   instance:
     preferIpAddress: true
-    ip-address: '${discovery.server.hostName}'  
-    hostname: '${discovery.server.hostName}'    
+    ip-address: '${discovery.server.hostName}'
+    hostname: '${discovery.server.hostName}'
+    non-secure-port: '${discovery.server.port}'
+
 
 #60 seconds
 
