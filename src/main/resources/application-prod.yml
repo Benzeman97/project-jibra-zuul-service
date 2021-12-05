@@ -24,7 +24,7 @@ zuul:
 discovery:
   server:
     port: 8070
-    hostName: 3.140.254.141
+    hostName: 3.13.5.65
 
 eureka:
   client:
@@ -35,9 +35,9 @@ eureka:
     fetch-registry: true
   instance:
     preferIpAddress: true
-    ip-address: '${discovery.server.hostName}'
-    hostname: '${discovery.server.hostName}'
-    non-secure-port: '${discovery.server.port}'
+    ip-address: 3.13.5.65
+    hostname: 3.13.5.65
+    non-secure-port: 8075
 
 
 #60 seconds
@@ -73,3 +73,10 @@ management:
       exposure:
         include:
           - '*'
+
+spring:
+  cloud:
+    inetutils:
+      ignored-interfaces:
+        - docker0
+        - veth.*
