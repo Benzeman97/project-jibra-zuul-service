@@ -24,19 +24,19 @@ zuul:
 discovery:
   server:
     port: 8070
-    hostName: 3.13.5.65
+    hostName: 18.119.40.220
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: 'http://${discovery.server.hostName}:${discovery.server.port}/eureka'
+       defaultZone: 'http://${discovery.server.hostName}:${discovery.server.port}/eureka'
     region: us-east-2
     register-with-eureka: true
     fetch-registry: true
   instance:
     preferIpAddress: true
-    ip-address: 3.13.5.65
-    hostname: 3.13.5.65
+    ip-address: 18.119.40.220
+    hostname: 18.119.40.220
     non-secure-port: 8075
 
 
@@ -59,7 +59,7 @@ ribbon:
     
 logging:
   file:
-    name: 'D:/Spring Boot Project/jibra-logs/common.log'
+    name: 'https://voyage-logs.s3.us-east-2.amazonaws.com/common.log'
   level:
     root: info
 
