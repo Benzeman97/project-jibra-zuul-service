@@ -59,10 +59,9 @@ ribbon:
     
 logging:
   file:
-    name: 'https://voyage-logs.s3.us-east-2.amazonaws.com/common.log'
+    name: '/home/ubuntu/voyage-logs/gateway.log'
   level:
     root: info
-
 
 management:
   endpoint:
@@ -80,3 +79,12 @@ spring:
       ignored-interfaces:
         - docker0
         - veth.*
+
+local:
+  log:
+    dir: '/home/ubuntu/voyage-logs'
+amazon:
+  bucket:
+    name: voyage-logs
+  access-key: AKIAZHUKXDCDA6U4U2MP
+  secret-key: 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

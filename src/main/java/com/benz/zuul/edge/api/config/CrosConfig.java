@@ -10,7 +10,7 @@ import org.springframework.web.filter.CorsFilter;
 
 @Configuration
 @EnableZuulProxy
-public class ZuulConfig {
+public class CrosConfig {
 
     @Bean
     public CorsFilter corsFilter() {

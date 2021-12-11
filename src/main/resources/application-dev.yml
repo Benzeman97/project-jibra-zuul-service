@@ -50,7 +50,7 @@ ribbon:
     
 logging:
   file:
-    name: 'D:/Spring Boot Project/jibra-logs/common.log'
+    name: 'D:/Spring Boot Project/jibra-logs/gateway.log'
   level:
     root: info
 
@@ -64,3 +64,12 @@ management:
       exposure:
         include:
           - '*'
+          
+local:
+  log:
+    dir: 'D:/Spring Boot Project/jibra-logs'
+amazon:
+  bucket:
+    name: voyage-logs
+  access-key: AKIAZHUKXDCDA6U4U2MP
+  secret-key: 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
