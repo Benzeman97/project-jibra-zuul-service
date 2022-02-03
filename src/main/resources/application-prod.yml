@@ -16,8 +16,8 @@ zuul:
       path: /auth/**
       service-id: authorization-server
   host:
-    socket-timeout-millis: 60000
-    connect-timeout-millis: 60000
+    socket-timeout-millis: 120000
+    connect-timeout-millis: 120000
   sensitive-headers: Cookie, Set-Cookie, Access-Control-Allow-Credentials, Access-Control-Allow-Origin
 
 
@@ -40,7 +40,7 @@ eureka:
     non-secure-port: 8075
 
 
-#60 seconds
+#120 seconds
 
 hystrix:
   command:
@@ -48,12 +48,12 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 60000
+            timeoutInMilliseconds: 600000
 
 
 ribbon:
-  ReadTimeout: 60000
-  connection-timeout: 60000
+  ReadTimeout: 120000
+  connection-timeout: 120000
   eureka:
     enabled: true
     
