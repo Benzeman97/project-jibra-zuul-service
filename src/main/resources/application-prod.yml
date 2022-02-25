@@ -25,6 +25,15 @@ discovery:
   server:
     port: 8070
     hostName: 18.119.40.220
+    
+#server:
+   #ssl:
+    #key-alias: https-zuul-edge-service
+    #key-store-type: JKS
+    #key-password: 14292Zuul
+    #key-store: classpath:https-zuul-edge-service.jks
+    #key-store-password: 14292Zuul
+
 
 eureka:
   client:
