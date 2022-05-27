@@ -1,11 +1,8 @@
 zuul:
   routes:
-    user-info-service:
-      path: /user-info/**
-      service-id: user-info-service
-    movie-info-service:
-      path: /movie-info/**
-      service-id: movie-info-service
+    content-info-service:
+      path: /content-info/**
+      service-id: content-info-service
     tvseries-info-service:
       path: /tvseries-info/**
       service-id: tvseries-info-service
