@@ -15,6 +15,9 @@ zuul:
     authorization-server:
       path: /auth/**
       service-id: authorization-server
+    xceleb-info-service:
+      path: /xceleb-info/**
+      service-id: xceleb-info-service
   host:
     socket-timeout-millis: 120000
     connect-timeout-millis: 120000
